@@ -1,11 +1,11 @@
-/***********************************************
- * Author:       Platonov A.A.                 *
- * Group:        ПИ-231                        *
- * Variant:      14                            *
- * Date:         20.09.2023                    *
- * Project name: Fart Isotherm                 *
- * OnlineGDB: https://onlinegdb.com/Ft4um0vHol *
- ***********************************************/
+/**********************************************
+ * Author:       Platonov A.A.                *
+ * Group:        ПИ-231                       *
+ * Variant:      14                           *
+ * Date:         27.09.2023                   *
+ * Project name: Fart Isotherm                *
+ * OnlineGDB: https://onlinegdb.com/YT1Q73t3W *
+ **********************************************/
 
 #include <iostream>
 #include <iomanip>
@@ -23,7 +23,9 @@ int main() {
   cout << fixed << setprecision(3);
   
   for (int i = 0; i < 10; i++) {
-    cout << "V = " << volume[i] << " P1 = " << work / volume[i] << " P2 = " << work / pow(volume[i], 1.2) << '\n';
+    cout << "V = " << volume[i]
+         << " P1 = " << work / volume[i]
+         << " P2 = " << work / pow(volume[i], 1.2) << '\n';
   }
   
   return 0;
