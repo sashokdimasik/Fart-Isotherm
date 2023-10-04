@@ -4,7 +4,7 @@
  * Variant:      14                           *
  * Date:         27.09.2023                   *
  * Project name: Fart Isotherm                *
- * OnlineGDB: https://onlinegdb.com/YT1Q73t3W *
+ * OnlineGDB: https://onlinegdb.com/cttlBlNqh *
  **********************************************/
 
 #include <iostream>
@@ -14,7 +14,7 @@
 using namespace std;
 
 int main() {
-  double volume[10] = {0.1, 0.2, 0.3, 0.4, 0.5, 1, 1.5, 2, 2.5, 3};
+  double volume = 0.1;
   double work;
 
   cout << "Enter work: ";
@@ -22,11 +22,20 @@ int main() {
   
   cout << fixed << setprecision(3);
   
-  for (int i = 0; i < 10; i++) {
-    cout << "V = " << volume[i]
-         << " P1 = " << work / volume[i]
-         << " P2 = " << work / pow(volume[i], 1.2) << '\n';
+  while (volume < 0.5) {
+    cout << "V = " << volume
+         << " P1 = " << work / volume
+         << " P2 = " << work / pow(volume, 1.2) << '\n';
+    volume += 0.1;
   }
+  
+  do {
+    cout << "V = " << volume
+         << " P1 = " << work / volume
+         << " P2 = " << work / pow(volume, 1.2) << '\n';
+    volume += 0.5;
+  } while (volume <= 3);
   
   return 0;
 }
+
